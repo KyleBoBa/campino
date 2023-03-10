@@ -28,10 +28,17 @@
 					<a href="hitta.html">Hitta oss</a>
 				</li>
 				<li>
-				<a href="tel:0121-13140">Ring Oss 0121-13140</a>
+					<a href="tel:0121-13140">Ring Oss 0121-13140</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
+<script>
+	hamburger = document.querySelector(".hamburger");
+	hamburger.onclick = function(){
+		navBar = document.querySelector(".nav-bar");
+		navBar.classList.toggle("active");
+	}
+</script>
 </body>
 </html>
