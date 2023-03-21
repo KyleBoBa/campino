@@ -9,6 +9,10 @@
 body{
 	background: #fefefe;
 }
+p{
+	color: #fefefe;
+}
+/* Allmän header för alla sidor */
 header{
 	width: 100%;
 	height: 80px;
@@ -57,6 +61,48 @@ header{
 h2{
 	font-family: 'Abril Fatface';
 	font-weight: lighter;
+	color: #fefefe;
+}
+/* Allmän footer för alla sidor */
+.footer{
+	background: #ffbb6a;
+}
+.tele{
+	display: flex;	
+	align-items: center;
+	flex-direction: column;
+	color: #fefefe;
+}
+.food{
+	flex-direction: row;
+}
+.foodora{
+	display: flex;
+
+}
+.icon{
+	display: flex;
+
+}
+/* Iconer för externa sidor */
+.fa{
+	padding: 30px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+.fa:hover{
+	opacity: 0.7;
+}
+/* Facebook icon */
+.fa-facebook{
+  background: #3B5998;
+  color: #fefefe;
+}
+.fa-tripadvisor{
+	background: #33e0a1;
 	color: #fefefe;
 }
 @media only screen and (max-width: 1320px){
