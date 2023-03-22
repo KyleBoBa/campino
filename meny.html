@@ -1,28 +1,79 @@
 <!DOCTYPE html>
 <html lang="sv">
-<link rel="stylesheet" href="mall.css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Titillium+Web:wght@600&display=swap">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pizzeria Campino</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Tilt+Prism&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="mall.css"/>
 </head>
 <body>
-	<div class="navigation">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				  <i class="fa fa-times" onclick="hideMenu()"></i>
-					<ul>
-						<li><a href="index.html">Start</a></li>
-						<li><a class="active" href="#">Mat Meny</a></li>		
-						<li><a href="hitta.html">Hitta oss</a></li>
-					</ul>
-				</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
-		</nav>
-	</div>
-	<div class="container">
-		<div class="infographic">
-			<img class="bild1" src="bilder/info1.jpg" alt="bild på info"/>
+	<header>
+		<div class="logo">Campino</div>
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
 		</div>
+		<nav class="nav-bar">
+			<ul>
+				<li>
+					<a href="index.html">Start</a>
+				</li>
+				<li>
+					<a class="active" href="#">Mat meny</a>
+				</li>		
+				<li>
+					<a href="hitta.html">Hitta oss</a>
+				</li>
+				<li>
+					<a href="tel:0121-13140">Ring oss 0121-131 40</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="sec1">
+		<h1>PIZZERIA</h1>
+		<i class="fa-thin fa-pizza"></i>
+		<h1>CAMPINO</h1>
 	</div>
+	<div class="f.back">
+		<footer>
+			<div class="collumns">
+				<div class="sidor">
+					<h3>SIDOR</h3>
+					<div class="pages">
+						<a href="#">Start</a>
+						<a href="#">Mat meny</a>
+						<a href="#">Hitta oss</a>
+					</div>
+				</div>
+				<div class="foodora">
+					<h3>BESTÄLL NU PÅ FOODORA</h3>
+					<div class="bestall">
+						<button onclick="window.open('https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u','_blank')">BESTÄLL HÄR</button>
+					</div>
+				</div>
+				<div class="kontakt">
+					<h3>KONTAKT</h3>
+					<p>Prästgatan 3<br>Söderköping</p>
+					<div class="icon">
+						<a href="https://www.facebook.com/campinosoderkoping/" class="fa fa-facebook"></a>
+						<a href="https://www.tripadvisor.se/Restaurant_Review-g227952-d10677172-Reviews-Pizzeria_Campino-Soderkoping_Ostergotland_County.html" class="fa fa-tripadvisor"></a>
+						<a href="https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u" class="fa fa-foodora"><img src="bilder/foodora.png" alt="foodora" width="30px"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+<script>
+	hamburger = document.querySelector(".hamburger");
+	hamburger.onclick = function(){
+		navBar = document.querySelector(".nav-bar");
+		navBar.classList.toggle("active");
+	}
+</script>
 </body>
 </html>

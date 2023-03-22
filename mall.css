@@ -62,23 +62,37 @@ h1{
 	font-weight: lighter;
 	color: #fefefe;
 }
+h3{
+	color: #fefefe;
+}
 /* Allmän footer för alla sidor */
 footer{
-	margin-top: 150px;
+	background-image: url("bilder/pizza1.png");
+	margin-top: 100px;
 	width: 100%;
-	padding-top: 100px;
+	padding-top: 50px;
 	font-size: 2rem;
 	color: #fefefe;
+}
+.u-footer{
+	background: rgba(125, 4, 19, 0.8);
+	width: 35%;
+	margin: auto;
+	border-radius: 50px;
 }
 .tele{
 	display: flex;	
 	align-items: center;
 	flex-direction: column;
 }
+.tid{
+	text-align: center;
+	margin: 15px 0;
+}
 .collumns{
-	background-image: url("bilder/pizza1.png");
 	display: flex;
-	padding: 100px 15%;
+	justify-content: space-between;
+	padding: 50px 15%;
 }
 .collumns div{
 	text-align: center;
@@ -89,6 +103,7 @@ footer{
 	letter-spacing: 1px;
 }
 .sidor{
+	padding: 15px 0;
 	border: 2px solid white;
 	background: #7d0413;
 }
@@ -123,11 +138,13 @@ footer{
 }
 /* Iconer för externa sidor */
 .kontakt{
+	padding: 15px 0;
 	border: 2px solid white;
 	background: #7d0413;
 }
 .kontakt p{
-	font-size: 1rem;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
 }
 .icon{
 	margin-top: 15px;
@@ -145,8 +162,8 @@ footer{
 	opacity: 0.7;
 }
 .fa-facebook{
-  background: #3B5998;
-  color: #fefefe;
+	background: #3B5998;
+	color: #fefefe;
 }
 .fa-tripadvisor{
 	background: #33e0a1;
@@ -156,6 +173,14 @@ footer{
 	background: #d70465;
 }
 /* Footer slut */
+@media only screen and (max-width: 1100px){
+	.collumns div h3{
+		margin-bottom: 15px;
+	}
+	.icon{
+		display: block;
+	}
+}
 @media only screen and (max-width: 960px){
 	.hamburger{
 		display: block;
@@ -205,8 +230,10 @@ footer{
 		background: #7d0413;
 	}
 }
-@media only screen and (max-width: 930px){
-	.icon{
-		display: block;
+@media only screen and (max-width: 700px){
+	.u-footer{
+		width: 70%;
+		margin: auto;
+		border-radius: 20px;
 	}
 }
