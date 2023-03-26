@@ -38,9 +38,11 @@
 		<div class="pizzeria">
 			
 		</div>
-		<h3>PIZZERIA</h3>
-		<i class="fa-thin fa-pizza"></i>
-		<h1>CAMPINO</h1>
+		<div class="logotyp">
+			<h3>PIZZERIA</h3>
+			<i class="fa-thin fa-pizza"></i>
+			<h1>CAMPINO</h1>
+		</div>
 	</div>
 	<footer>
 		<div class="u-footer">
@@ -149,7 +151,7 @@
 		var openingHours = getOpeningHours();
 		document.getElementById("dayOfWeek").innerHTML = dayOfWeek;
 		document.getElementById("time").innerHTML = timeString;
-		document.getElementById("openingHours").innerHTML = "Öppettiderna för idag är " + openingHours;
+		document.getElementById("openingHours").innerHTML = "Öppettiderna är " + openingHours;
 	}
 	setInterval(updateClock, 1000);
 </script>
