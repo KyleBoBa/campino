@@ -27,9 +27,6 @@ header{
 	color: #fefefe;
 	margin: 0 1rem;
 }
-.expand{
-	display: none;
-}
 .nav-bar ul{
 	display: flex;
 }
@@ -96,7 +93,6 @@ h1{
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 	margin: 10px;
 	padding: 10px;
-	width: calc(33.33% - 20px);
 }
 .menu-item h3{
 	font-size: 1.2em;
@@ -114,6 +110,9 @@ h1{
 .pizza-container{
 	border: 1px solid #ffbb6a;
 	padding: 10px;
+}
+.pizza-container h2{
+	text-align: center;
 }
 .ordinary-pizza{
 	grid-row: 1;
@@ -166,6 +165,7 @@ footer{
 	display: flex;
 	justify-content: space-between;
 	padding: 50px 15%;
+	background: rgba(125, 4, 19, 0.9);
 }
 .collumns div{
 	text-align: center;
@@ -174,6 +174,9 @@ footer{
 	font-size: 1.7rem;
 	margin-bottom: 30px;
 	letter-spacing: 1px;
+}
+.col-side{
+	width: 20%;
 }
 .sidor{
 	padding: 15px 0;
@@ -186,28 +189,8 @@ footer{
 	font-size: 1.2rem;
 	margin-bottom: 10px;
 }
-.foodora{
-	flex-grow: 2;
-}
-.foodora>h3{
-	background: #7d0413;
-	border: 2px solid white;
-	padding: 15px 0;
+.pages a:hover{
 	text-decoration: underline;
-}
-.bestall button{
-	width:fit-content;
-	border: 6px solid #fefefe;
-	padding:14px 50px;
-	border-radius:50px;
-	text-decoration:none;
-	color:#fefefe;
-	background: #7d0413;
-	font-size: 1.5rem;
-	cursor: pointer;
-}
-.bestall button:hover{
-	color: #ffbb6a;
 }
 /* Iconer för externa sidor */
 .kontakt{

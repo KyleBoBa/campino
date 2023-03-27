@@ -10,8 +10,15 @@
 	<link rel="stylesheet" href="mall.css">
 </head>
 <body>
+	<p>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!">
+		</a>
+	</p>
 	<header>
-		<div class="logo">Campino</div>
+		<div class="logo">CAMPINO</div>
 		<div class="hamburger">
 			<div class="line"></div>
 			<div class="line"></div>
@@ -37,14 +44,19 @@
 	<div class="sec1">
 		<div class="outer-logotyp">
 			<div class="logotyp">
-				<h3>PIZZERIA<hr class="hr-logo"></h3>
+				<h3>PIZZERIA</h3>
+				<hr class="hr-logo">
 				<h1>CAMPINO</h1>
 			</div>
 		</div>
 	</div>
 	<div class="sec2">
 		<div class="map-location">
-			wdawdawd
+			<h2 class="idk">Vår lokal</h2>
+			<address>
+				Prästgatan 3<br>
+				Söderköping
+			</address>
 		</div>
 		<div class="map">
 			<h2 class="idk">Karta</h2>
@@ -59,41 +71,113 @@
 			</address>
 		</div>
 	</div>
-	<div class="f.back">
-		<footer>
-			<div class="collumns">
-				<div class="sidor">
-					<h3>SIDOR</h3>
-					<div class="pages">
-						<a href="index.html">Start</a>
-						<a href="meny.html">Mat meny</a>
-						<a href="#">Hitta oss</a>
-					</div>
-				</div>
-				<div class="foodora">
-					<h3>BESTÄLL NU PÅ FOODORA</h3>
-					<div class="bestall">
-						<button onclick="window.open('https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u','_blank')">BESTÄLL HÄR</button>
-					</div>
-				</div>
-				<div class="kontakt">
-					<h3>KONTAKT</h3>
-					<p>Prästgatan 3<br>Söderköping</p>
-					<div class="icon">
-						<a href="https://www.facebook.com/campinosoderkoping/" class="fa fa-facebook"></a>
-						<a href="https://www.tripadvisor.se/Restaurant_Review-g227952-d10677172-Reviews-Pizzeria_Campino-Soderkoping_Ostergotland_County.html" class="fa fa-tripadvisor"></a>
-						<a href="https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u" class="fa fa-foodora"><img src="bilder/foodora.png" alt="foodora" width="30"></a>
-					</div>
+	<footer>
+		<div class="u-footer">
+			<div class="tele">
+				<h2>RING OSS</h2>
+				<p>0121-131 40</p>
+			</div>
+			<div class="tid">
+				<p>Idag så är det <span id="dayOfWeek"></span></p>
+				<p id="openingHours"></p>
+				<span id="time"></span>
+			</div>
+		</div>
+		<div class="collumns">
+			<div class="sidor col-side">
+				<h3>SIDOR</h3>
+				<div class="pages">
+					<a href="#">Start</a>
+					<a href="meny.html">Mat meny</a>
+					<a href="hitta.html">Hitta oss</a>
 				</div>
 			</div>
-		</footer>
-	</div>
+			<div class="logotyp">
+				<img src="bilder/logotyp.png" alt="foodora">
+			</div>
+			<div class="kontakt col-side">
+				<h3>KONTAKT</h3>
+				<p>Prästgatan 3<br>Söderköping</p>
+				<div class="icon">
+					<a href="https://www.facebook.com/campinosoderkoping/" class="fa fa-facebook"></a>
+					<a href="https://www.tripadvisor.se/Restaurant_Review-g227952-d10677172-Reviews-Pizzeria_Campino-Soderkoping_Ostergotland_County.html" class="fa fa-tripadvisor"></a>
+					<a href="https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u" class="fa fa-foodora"><img src="bilder/foodora.png" alt="foodora" width="30"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 <script>
 	hamburger = document.querySelector(".hamburger");
 	hamburger.onclick = function(){
 		navBar = document.querySelector(".nav-bar");
 		navBar.classList.toggle("active");
 	}
+</script>
+<script>
+	function getDayOfWeek(){
+		var daysOfWeek = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+		var now = new Date();
+		var dayOfWeek = daysOfWeek[now.getDay()];
+		return dayOfWeek;
+	}
+	function getTimeOfDay(){
+		var now = new Date();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+		var timeOfDay = "AM";
+		if (hours > 12){
+			hours -= 12;
+			timeOfDay = "PM";
+		}
+		if (hours == 0){
+			hours = 12;
+		}
+		if (minutes < 10){
+			minutes = "0" + minutes;
+		}
+		if (seconds < 10){
+			seconds = "0" + seconds;
+		}
+		var timeString = hours + ":" + minutes + ":" + seconds + " " + timeOfDay;
+		return timeString;
+	}
+	function getOpeningHours(){
+		var now = new Date();
+		var dayOfWeek = now.getDay();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var openingHours = [
+			{dayOfWeek: 0, hours: "12-9pm"}, // Söndag
+			{dayOfWeek: 1, hours: "11am-9pm"}, // Måndag
+			{dayOfWeek: 2, hours: "11am-9pm"}, // Tisdag
+			{dayOfWeek: 3, hours: "11am-9pm"}, // Onsdag
+			{dayOfWeek: 4, hours: "11am-9pm"}, // Torsdag
+			{dayOfWeek: 5, hours: "11am-9pm"}, // Fredag
+			{dayOfWeek: 6, hours: "12-9pm"} // Lördag
+		];
+		var openingHoursString = "";
+		for (var i = 0; i < openingHours.length; i++){
+			if (openingHours[i].dayOfWeek == dayOfWeek){
+				openingHoursString = openingHours[i].hours;
+				break;
+			}
+		}
+		if (openingHoursString){
+			return openingHoursString;
+		} else{
+			return "Closed";
+		}
+	}
+	function updateClock(){
+		var dayOfWeek = getDayOfWeek();
+		var timeString = getTimeOfDay();
+		var openingHours = getOpeningHours();
+		document.getElementById("dayOfWeek").innerHTML = dayOfWeek;
+		document.getElementById("time").innerHTML = timeString;
+		document.getElementById("openingHours").innerHTML = "Öppettiderna är " + openingHours;
+	}
+	setInterval(updateClock, 1000);
 </script>
 </body>
 </html>
