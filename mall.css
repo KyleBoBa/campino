@@ -4,6 +4,7 @@
 	list-style: none;
 	text-decoration: none;
 	font-family: 'Montserrat';
+	color: #fefefe;
 }
 body{
 	background: #7d0413;
@@ -57,13 +58,86 @@ header{
 	margin-top: 80px;
 	background: #7d0413
 }
+.outer-logotyp{
+	padding-top: 50px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+	background-image: url("bilder/logo-background.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.hr-logo{
+	margin: 0 auto;
+	width: 40%;
+}
 h1{
 	font-family: 'Abril Fatface';
 	font-weight: lighter;
-	color: #fefefe;
 }
-h3{
-	color: #fefefe;
+.sec2{
+	margin-top: 30px;
+}
+.info{
+	font-size: 1.2rem;
+	text-align: center;
+}
+.menu{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	margin: 0 auto;
+	max-width: 70%;
+}
+.menu-item{
+	border: 1px solid #ffbb6a;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+	margin: 10px;
+	padding: 10px;
+	width: calc(33.33% - 20px);
+}
+.menu-item h3{
+	font-size: 1.2em;
+	margin: 0;
+}
+.menu-item p{
+	font-size: 1em;
+	margin: 5px 0;
+}
+.menu-item .price{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
+.pizza-container{
+	border: 1px solid #ffbb6a;
+	padding: 10px;
+}
+.ordinary-pizza{
+	grid-row: 1;
+	grid-column: 1 / span 3;
+}
+
+.vegetarian-pizza{
+	grid-row: 2;
+	grid-column: 1 / span 2;
+}
+
+.kebab-pizza{
+	grid-row: 2;
+	grid-column: 3;
+}
+.idk{
+	font-size: 24px;
+	margin: 30px 0 20px;
+}
+iframe {
+	margin-bottom: 30px;
+	border: 0;
+	width: 100%;
+	height: 400px;
 }
 /* Allmän footer för alla sidor */
 footer{
@@ -72,7 +146,6 @@ footer{
 	width: 100%;
 	padding-top: 50px;
 	font-size: 2rem;
-	color: #fefefe;
 }
 .u-footer{
 	background: rgba(125, 4, 19, 0.8);
@@ -163,11 +236,10 @@ footer{
 }
 .fa-facebook{
 	background: #3B5998;
-	color: #fefefe;
+
 }
 .fa-tripadvisor{
 	background: #33e0a1;
-	color: #fefefe;
 }
 .fa-foodora{
 	background: #d70465;

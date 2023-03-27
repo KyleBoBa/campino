@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Tilt+Prism&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="mall.css"/>
+	<link rel="stylesheet" href="mall.css">
 </head>
 <body>
 	<header>
@@ -35,45 +35,209 @@
 		</nav>
 	</header>
 	<div class="sec1">
-		<h1>PIZZERIA</h1>
-		<i class="fa-thin fa-pizza"></i>
-		<h1>CAMPINO</h1>
+		<div class="outer-logotyp">
+			<div class="logotyp">
+				<h3>PIZZERIA</h3>
+				<hr class="hr-logo">
+				<h1>CAMPINO</h1>
+			</div>
+		</div>
 	</div>
-	<div class="f.back">
-		<footer>
-			<div class="collumns">
-				<div class="sidor">
-					<h3>SIDOR</h3>
-					<div class="pages">
-						<a href="#">Start</a>
-						<a href="#">Mat meny</a>
-						<a href="#">Hitta oss</a>
+	<div class="sec2">
+		<div class="menu">
+			<div class="pizza-container vegetarian-pizza">
+				<h2>VEGETAIAN PIZZA</h2>
+				<div class="veg-row">
+					<div class="menu-item">
+						<h4>Farbror</h4>
+						<p>Iceberg lettuce, onion, tomatoes, feta cheese</p>
+						<div class="price">$31.00</div>
 					</div>
-				</div>
-				<div class="foodora">
-					<h3>BESTÄLL NU PÅ FOODORA</h3>
-					<div class="bestall">
-						<button onclick="window.open('https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u','_blank')">BESTÄLL HÄR</button>
+					<div class="menu-item">
+						<h4>Ida</h4>
+						<p>Mushrooms, bell pepper, onion, gorgonzola cheese</p>
+						<div class="price">$31.00</div>
 					</div>
-				</div>
-				<div class="kontakt">
-					<h3>KONTAKT</h3>
-					<p>Prästgatan 3<br>Söderköping</p>
-					<div class="icon">
-						<a href="https://www.facebook.com/campinosoderkoping/" class="fa fa-facebook"></a>
-						<a href="https://www.tripadvisor.se/Restaurant_Review-g227952-d10677172-Reviews-Pizzeria_Campino-Soderkoping_Ostergotland_County.html" class="fa fa-tripadvisor"></a>
-						<a href="https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u" class="fa fa-foodora"><img src="bilder/foodora.png" alt="foodora" width="30px"></a>
+					<div class="menu-item">
+						<h4>Vegetaria Jok</h4>
+						<p>Mushrooms, bell pepper, asparagus, olives</p>
+						<div class="price">$31.00</div>
+					</div>
+					<div class="menu-item">
+						<h4>Rhodos</h4>
+						<p>Feta cheese, bell pepper, tomatoes, cucumber, olives, onion</p>
+						<div class="price">$31.00</div>
+					</div>
+					<div class="menu-item">
+						<h4>Ruccola</h4>
+						<p>Rocket leaves, sea salt, olive oil</p>
+						<div class="price">$31.00</div>
+					</div>
+					<div class="menu-item">
+						<h4>Funghi</h4>
+						<p>Mushrooms</p>
+						<div class="price">$31.00</div>
 					</div>
 				</div>
 			</div>
-		</footer>
+			<div class="pizza-container ordinary-pizza">
+				<h2>ORDINARY PIZZA</h2>
+				<div class="menu-item">
+					<h4>Margarita</h4>
+					<p>Tomato sauce, cheese</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Don Louie</h4>
+					<p>Various vegetarian toppings</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Viagra</h4>
+					<p>Beef, pork, chicken, kebab meat, mild sauce, bearnaise sauce</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Capricciosa</h4>
+					<p>Tomato sauce, cheese, ham, mushrooms</p>
+					<div class="price">$31.00</div>
+				</div>
+			</div>
+			<div class="pizza-container kebab-pizza">
+				<h2>KEBAB PIZZA</h2>
+				<div class="menu-item">
+					<h4>Margarita</h4>
+					<p>Tomato sauce, cheese</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Don Louie</h4>
+					<p>Various vegetarian toppings</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Viagra</h4>
+					<p>Beef, pork, chicken, kebab meat, mild sauce, bearnaise sauce</p>
+					<div class="price">$31.00</div>
+				</div>
+				<div class="menu-item">
+					<h4>Capricciosa</h4>
+					<p>Tomato sauce, cheese, ham, mushrooms</p>
+					<div class="price">$31.00</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<footer>
+		<div class="u-footer">
+			<div class="tele">
+				<h2>RING OSS</h2>
+				<p>0121-131 40</p>
+			</div>
+			<div class="tid">
+				<p>Idag så är det <span id="dayOfWeek"></span></p>
+				<p id="openingHours"></p>
+				<span id="time"></span>
+			</div>
+		</div>
+		<div class="collumns">
+			<div class="sidor">
+				<h3>SIDOR</h3>
+				<div class="pages">
+					<a href="index.html">Start</a>
+					<a href="#">Mat meny</a>
+					<a href="hitta.html">Hitta oss</a>
+				</div>
+			</div>
+			<div class="foodora">
+				<h3>BESTÄLL NU PÅ FOODORA</h3>
+				<div class="bestall">
+					<button onclick="window.open('https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u','_blank')">BESTÄLL HÄR</button>
+				</div>
+			</div>
+			<div class="kontakt">
+				<h3>KONTAKT</h3>
+				<p>Prästgatan 3<br>Söderköping</p>
+				<div class="icon">
+					<a href="https://www.facebook.com/campinosoderkoping/" class="fa fa-facebook"></a>
+					<a href="https://www.tripadvisor.se/Restaurant_Review-g227952-d10677172-Reviews-Pizzeria_Campino-Soderkoping_Ostergotland_County.html" class="fa fa-tripadvisor"></a>
+					<a href="https://www.foodora.se/en/restaurant/n48u/pizzeria-campino-n48u" class="fa fa-foodora"><img src="bilder/foodora.png" alt="foodora" width="30"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 <script>
 	hamburger = document.querySelector(".hamburger");
 	hamburger.onclick = function(){
 		navBar = document.querySelector(".nav-bar");
 		navBar.classList.toggle("active");
 	}
+</script>
+<script>
+	function getDayOfWeek(){
+		var daysOfWeek = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+		var now = new Date();
+		var dayOfWeek = daysOfWeek[now.getDay()];
+		return dayOfWeek;
+	}
+	function getTimeOfDay(){
+		var now = new Date();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+		var timeOfDay = "AM";
+		if (hours > 12){
+			hours -= 12;
+			timeOfDay = "PM";
+		}
+		if (hours == 0){
+			hours = 12;
+		}
+		if (minutes < 10){
+			minutes = "0" + minutes;
+		}
+		if (seconds < 10){
+			seconds = "0" + seconds;
+		}
+		var timeString = hours + ":" + minutes + ":" + seconds + " " + timeOfDay;
+		return timeString;
+	}
+	function getOpeningHours(){
+		var now = new Date();
+		var dayOfWeek = now.getDay();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var openingHours = [
+			{dayOfWeek: 0, hours: "12-9pm"}, // Söndag
+			{dayOfWeek: 1, hours: "11am-9pm"}, // Måndag
+			{dayOfWeek: 2, hours: "11am-9pm"}, // Tisdag
+			{dayOfWeek: 3, hours: "11am-9pm"}, // Onsdag
+			{dayOfWeek: 4, hours: "11am-9pm"}, // Torsdag
+			{dayOfWeek: 5, hours: "11am-9pm"}, // Fredag
+			{dayOfWeek: 6, hours: "12-9pm"} // Lördag
+		];
+		var openingHoursString = "";
+		for (var i = 0; i < openingHours.length; i++){
+			if (openingHours[i].dayOfWeek == dayOfWeek){
+				openingHoursString = openingHours[i].hours;
+				break;
+			}
+		}
+		if (openingHoursString){
+			return openingHoursString;
+		} else{
+			return "Closed";
+		}
+	}
+	function updateClock(){
+		var dayOfWeek = getDayOfWeek();
+		var timeString = getTimeOfDay();
+		var openingHours = getOpeningHours();
+		document.getElementById("dayOfWeek").innerHTML = dayOfWeek;
+		document.getElementById("time").innerHTML = timeString;
+		document.getElementById("openingHours").innerHTML = "Öppettiderna är " + openingHours;
+	}
+	setInterval(updateClock, 1000);
 </script>
 </body>
 </html>
