@@ -82,7 +82,7 @@ h1{
 }
 .menu{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
 	margin: 0 auto;
 	max-width: 80%;
@@ -102,6 +102,9 @@ h1{
 	font-size: 1em;
 	margin: 5px 0;
 }
+.pizza-pic>img{
+	width: 100%;
+}
 .pizza-container{
 	border: 1px solid #ffbb6a;
 	padding: 10px;
@@ -113,7 +116,7 @@ h1{
 }
 .ordinary-pizza{
 	grid-row: 1;
-	grid-column: 1 / span 2;
+	grid-column: 2 / span 2;
 }
 .ordinary-pizza .mat-item{
 	display: flex;
@@ -121,22 +124,52 @@ h1{
 }
 .vegetarian-pizza{
 	grid-row: 3;
-	grid-column: 2;
+	grid-column: 3;
 }
 .kebab-pizza{
 	grid-row: 2;
-	grid-column: 2;
+	grid-column: 3;
 }
 .special-pizza{
 	grid-row: 2;
-	grid-column: 1;
+	grid-column: 2;
 }
 .lyx-pizza{
 	grid-row: 3;
+	grid-column: 2;
+}
+.vegetarian-piz{
+	grid-row: 3;
+	grid-column: 4;
+}
+.ordinary-piz{
+	grid-row: 1;
 	grid-column: 1;
 }
-.idk{
-	font-size: 24px;
+.ordinary-piz2{
+	grid-row: 1;
+	grid-column: 4;
+}
+.special-piz{
+	grid-row: 2;
+	grid-column: 1;
+}
+.kebab-piz{
+	grid-row: 2;
+	grid-column: 4;
+}
+.lyx-piz{
+	grid-row: 3;
+	grid-column: 1;
+}
+.hitta{
+	text-align: center;
+}
+.map-location>address{
+	font-size: 1.6rem;
+}
+.hitta-titel{
+	font-size: 2.4rem;
 	margin: 30px 0 20px;
 }
 iframe {
@@ -238,12 +271,33 @@ footer{
 	background: #d70465;
 }
 /* Footer slut */
+
+@media only screen and (max-width: 1300px){
+	.collumns{
+		padding: 50px 5%;
+	}
+}
 @media only screen and (max-width: 1100px){
+	.ordinary-pizza{
+		grid-column: 1 / span 4;
+	}
+	.special-pizza{
+		grid-column: 1 / span 2;
+	}
+	.kebab-pizza{
+		grid-column: 3 / span 4;
+	}
+	.lyx-pizza{
+		grid-column: 1 / span 2;
+	}
+	.vegetarian-pizza{
+		grid-column: 3 / span 4;
+	}
 	.collumns div h3{
 		margin-bottom: 15px;
 	}
-	.icon{
-		display: block;
+	.pizza-pic{
+		opacity: 0;
 	}
 }
 @media only screen and (max-width: 960px){
@@ -294,11 +348,17 @@ footer{
 		font-weight: bold;
 		background: #7d0413;
 	}
+	.collumns{
+		padding: 50px 0;
+	}
 }
 @media only screen and (max-width: 700px){
 	.u-footer{
 		width: 70%;
 		margin: auto;
 		border-radius: 20px;
+	}
+	.collumns{
+		padding: 0;
 	}
 }
